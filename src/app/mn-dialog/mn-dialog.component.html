@@ -1,0 +1,10 @@
+<mn-popup [hidden]=false>
+  <h4 *ngIf="showTitle()" class="mdl-dialog__title">{{title}}</h4>
+  <div class="mdl-dialog__content">{{message}}</div>
+  <div class="mdl-dialog__actions">
+    <mn-button id="resolve" type="flat"  title="Accetta" (onClick)="resolve()"  colored="primary">
+    </mn-button>
+    <mn-button id="reject" type="flat"  title="Rifiuta" (onClick)="reject()"  colored="primary">
+    </mn-button>
+  </div>
+</mn-popup>

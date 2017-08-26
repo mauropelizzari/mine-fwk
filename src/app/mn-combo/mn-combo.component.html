@@ -1,0 +1,12 @@
+<div #container [hidden] class="mdl-textfield mdl-js-textfield mdl-textfield--floating-label is-focused">
+  <select #field class="mdl-textfield__input"
+    [required]="required"
+    [disabled]="disabled"
+    [(ngModel)]="value"
+    [id]="id"
+    (focus)="focus()"
+    (blur)="blur()">
+    <option *ngFor="let item of items" [value]="item[valueName]">{{item[descriptionName]}}</option>
+  </select>
+  <label class="mdl-textfield__label" for="{{id}}">{{label}}</label>
+</div>

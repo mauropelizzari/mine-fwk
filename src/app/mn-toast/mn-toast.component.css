@@ -1,0 +1,119 @@
+
+.alert {
+    width: 100%;
+    word-wrap: normal;
+    margin:  20 20 20 20;
+}
+
+.alert {
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.30rem;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, .5);
+}
+
+.alert-heading {
+  color: inherit;
+}
+
+.alert-link {
+  float : right;
+  font-weight: bold;
+  font-size: 20px
+}
+
+.alert .close {
+  top: -0.75rem;
+  color: inherit;
+}
+
+.alert-success {
+  background-color: rgb(76, 175, 80);
+  border-color: rgb(76, 175, 80);
+  color: white;
+}
+
+.alert-success hr {
+  border-top-color: #c1e2b3;
+}
+
+.alert-success .alert-link {
+  color: white;
+  text-decoration: none;
+}
+
+.alert-info {
+  background-color: rgb(158, 158, 158);
+  border-color: rgb(158, 158, 158);
+  color: white;
+}
+
+.alert-info hr {
+  border-top-color: #a6d5ec;
+}
+
+.alert-info .alert-link {
+  color: #245269;
+}
+
+.alert-warning {
+  background-color: rgb(255, 193, 7);
+  border-color: rgb(255, 193, 7);
+  color: #8a6d3b;
+}
+
+.alert-warning hr {
+  border-top-color: #f7ecb5;
+}
+
+.alert-warning .alert-link {
+  color: #66512c;
+}
+
+.alert-danger {
+  background-color: rgb(211, 47, 47);
+  border-color: rgb(211, 47, 47);
+  color: white;
+}
+
+.alert-danger hr {
+  border-top-color: #e4b9b9;
+}
+
+.alert-danger .alert-link {
+  color: white;
+  text-decoration: none;
+}
+
+.toast-container {
+  position: absolute;
+  top: 10%;
+  right: 5%;
+  min-width: 250px;
+  max-width: 250px;
+  padding: 10px 10px 10px 10px;
+  z-index: 2;
+}
+
+.show {
+  -webkit-animation: fadein 0.5s, fadeout 0.5s 2.5s;
+  animation: fadein 0.5s, fadeout 0.5s 2.5s;
+}
+
+.fade {
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+
+.fade.show {
+  opacity: 1;
+}
+
+/* Animations to fade the snackbar in and out */
+@-webkit-keyframes fadein {
+  from {bottom: 0; opacity: 0;}
+  to {bottom: 30px; opacity: 1;}
+}
