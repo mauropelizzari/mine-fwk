@@ -1,65 +1,75 @@
 
-<mn-master-page>
+<mn-master-page title="MINE - ShowCase">
     <!--<mn-dialog-container></mn-dialog-container>-->
     <mn-dyn-container></mn-dyn-container>
 
-    <h4>Buttons</h4>
-    <mn-button
-      id="btn_1"
-      type="raised"
-      title="BTN1"
-      (onClick)="showToast('errore',MESSAGE_TYPE.ERROR,true)"
-      colored="primary"></mn-button>
 
-    <mn-button id="btn_2"
-      type="raised"
-      title="BTN2"
-      (onClick)="showToast('info dfsddfsdfssf sffsdsfdsfd sddfsfsdsfdsfd',MESSAGE_TYPE.INFO,false)"
-      colored="accent">
-  </mn-button>
+    <mn-panel id="pnlButtons" title="Buttons">
+      <div>
+      <mn-button
+        id="btn_1"
+        type="raised"
+        title="BTN1"
+        (onClick)="showToast('errore',MESSAGE_TYPE.ERROR,true)"
+        colored="primary"></mn-button>
 
-  <mn-button id="btn_3" (onClick)="showToast('Operazione eseguita sddfsfsdsfdsfd sddfsfsdsfdsfd',MESSAGE_TYPE.SUCCESS,false)"
-    type="fab" colored="primary"></mn-button>
+      <mn-button id="btn_2"
+        type="raised"
+        title="BTN2"
+        (onClick)="showToast('info dfsddfsdfssf sffsdsfdsfd sddfsfsdsfdsfd',MESSAGE_TYPE.INFO,false)"
+        colored="accent">
+    </mn-button>
 
-    <mn-button id="btn_4"
-      type="raised"
-      title="BTN4"
-      (onClick)="showDialog()"
-      colored="accent">
-  </mn-button>
+    <mn-button id="btn_3" (onClick)="showToast('Operazione eseguita sddfsfsdsfdsfd sddfsfsdsfdsfd',MESSAGE_TYPE.SUCCESS,false)"
+      type="fab" colored="primary"></mn-button>
 
-  <mn-button
-    id="btn_5"
-    type="raised"
-    title="BTN5"
-    (onClick)="showDialog('Procedere con l\'operazione','bla bla bla')"
-    colored="primary"></mn-button>
+      <mn-button id="btn_4"
+        type="raised"
+        title="BTN4"
+        (onClick)="showDialog('','Procedere con l\'operazione')"
+        colored="accent">
+    </mn-button>
 
     <mn-button
-      id="btn_6"
+      id="btn_5"
       type="raised"
-      title="BTN6"
-      (onClick)="showGenericComponent()"
+      title="BTN5"
+      (onClick)="showDialog('Procedere con l\'operazione','bla bla bla')"
       colored="primary"></mn-button>
 
       <mn-button
-        id="btn_7"
+        id="btn_6"
         type="raised"
-        title="BTN7"
-        (onClick)="showPopup()"
+        title="BTN6"
+        tooltip="Apre un popup generico"
+        (onClick)="showGenericComponent()"
         colored="primary"></mn-button>
 
-    <h4>Text fields</h4>
-		<mn-textfield maxlength="10"
-    required="true" id="text1" [(ngModel)]='valore' label="Campo from"></mn-textfield>
+        <mn-button
+          id="btn_7"
+          type="raised"
+          title="BTN7"
+          tooltip="Apre un popup generico con contenuto"
+          (onClick)="showPopup()"
+          colored="primary"></mn-button>
+        </div>
+    </mn-panel>
 
-		<mn-textfield id="text2" [(ngModel)]='valore2' label="Campo to" readonly="true"></mn-textfield>
+    <mn-panel id="pnlFields" title="Text Fields">
+      <mn-textfield maxlength="10"
+      required="true" id="text1" [(ngModel)]='valore' label="Campo from"></mn-textfield>
 
-    <h4>Combos</h4>
-    <mn-combo required [datasource]="nmDs" id="c1" label="Numbers"></mn-combo>
+      <mn-textfield id="text2" [(ngModel)]='valore2' label="Campo to" readonly="true"></mn-textfield>
+
+      <h4>Combos</h4>
+      <mn-combo required [datasource]="nmDs" id="c1" label="Numbers"></mn-combo>
+
+
+    </mn-panel>
+
 
     <mn-popup id="pp">
-      <p>pippo</p>
+      <p>Contenuto generico</p>
     </mn-popup>
 
 </mn-master-page>

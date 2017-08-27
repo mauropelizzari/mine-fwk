@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild,EventEmitter} from '@angular/core';
 import { MnMasterPageComponent} from '../mn-master-page/mn-master-page.component'
 import { MnToastComponent,MESSAGE_TYPE } from '../mn-toast/mn-toast.component';
 import { MnTextFieldComponent} from '../mn-text-field/mn-text-field.component'
@@ -9,6 +9,7 @@ import { MnRemoteDataSource } from '../mn-fwk/mn-remoteds.service';
 import { MnDynamicContainerComponent } from '../mn-fwk/mn-dyn-container.component';
 import { MnPopupComponent} from '../mn-popup/mn-popup.component'
 import { MnDialogComponent} from '../mn-dialog/mn-dialog.component'
+import { MnPanelComponent} from '../mn-panel/mn-panel.component'
 import { Http } from '@angular/http';
 
 @Component({
@@ -45,6 +46,9 @@ export class ShowcaseComponent implements OnInit {
     let popup = new MnDialogComponent();
     popup.title = title;
     popup.message = message;
+    popup.resolveAction = () => {
+      alert("Operazione eseguita");
+    }
     this.dynContainer.append(popup);
   }
 

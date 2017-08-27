@@ -1,0 +1,11 @@
+<div [id]=id class="mdl-panel-container">
+  <div class="mdl-panel">
+    <!-- Titolo e immagine opzionale -->
+    <div class="mdl-panel-title" [hidden]=showTitleBar()><i class="material-icons">{{icon}}</i><h4>{{title}}</h4></div>
+    <!-- contenuto -->
+    <div class="mdl-panel-content">
+      <ng-content></ng-content>
+    </div>
+    <!-- footer??? -->
+  </div>
+</div>

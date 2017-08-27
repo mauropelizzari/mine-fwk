@@ -1,5 +1,5 @@
-<div [hidden]=hidden class="overlay" (click)="hide()">
-  <div class="mdl-popup" >
-    <ng-content></ng-content>
-  </div>
+<div (click)=hide() [ngClass]="{'mdl-layout__obfuscator':hidden,
+            'mdl-layout__obfuscator is-visible':!hidden}"></div>
+<div class="mdl-popup" [hidden]=hidden >
+  <ng-content></ng-content>
 </div>

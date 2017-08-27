@@ -1,5 +1,5 @@
 <div class="mdl-layout__container">
-<div class="master-layout mdl-layout mdl-layout--fixed-drawer mdl-layout--fixed-header">
+<div class="master-layout mdl-layout mdl-layout--fixed-header">
     <header class="master-header mdl-layout__header mdl-color--grey-100 mdl-color-text--grey-600">
       <div class="mdl-layout__header-row">
         <span class="mdl-layout-title">{{title}}</span>
@@ -23,7 +23,7 @@
         </ul>
       </div>
     </header>
-    <div class="master-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
+    <!-- <div class="master-drawer mdl-layout__drawer mdl-color--blue-grey-900 mdl-color-text--blue-grey-50">
       <header class="master-drawer-header">
         <img src="{{logo}}" class="master-avatar">
         <div class="master-avatar-dropdown">
@@ -39,12 +39,12 @@
         <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
           <div class="mdl-layout-spacer"></div>
       </nav>
-    </div>
+    </div> -->
     <main class="mdl-layout__content mdl-color--grey-100">
       <div class="mdl-grid master-content">
         <ng-content></ng-content>
       </div>
     </main>
-    <div class="mdl-layout__obfuscator"></div>
+
   </div>
 </div>

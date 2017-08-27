@@ -10,9 +10,10 @@ export const MDL_BUTTON_COLOR = ['primary','accent',''];
                 (click)="doClick()"
                 [disabled]="disabled"
                 [hidden]="hidden"
+                [title]="tooltip"
                 [ngClass]="setClasses()">
                 <span *ngIf="type != 'fab' && type != 'mini-fab'">{{title}}</span>
-                <i *ngIf="type == 'fab' || type == 'mini-fab'" class="material-icons">&#43;</i>
+                <i *ngIf="type == 'fab' || type == 'mini-fab'" class="material-icons-plus">&#43;</i>
                 </button>`,
     styleUrls: ['./mn-button.component.css']
     })
@@ -41,6 +42,9 @@ export class MnButtonComponent  {
      */
     @Input("id")
     public id:string;
+
+    @Input("tooltip")
+    public tooltip:string = "";
 
     /**
      * Event emitter legato a click del bottone

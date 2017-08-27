@@ -1,4 +1,5 @@
-import { Component, OnInit,ViewContainerRef,ViewChild,Input,ComponentRef } from '@angular/core';
+import { Component, OnInit,ViewContainerRef,ViewChild,
+  Input,ComponentRef,ElementRef,Output,EventEmitter } from '@angular/core';
 import { MnPopupComponent } from '../mn-popup/mn-popup.component'
 
 @Component({
@@ -14,19 +15,35 @@ export class MnDialogComponent extends MnPopupComponent {
   @Input("message")
   message : string = "";
 
+  @Output("onResolve")
+  onResolve = new EventEmitter();
+
+  @Output("onReject")
+  onReject  = new EventEmitter();
+
+  @Input("resolveAction")
+  resolveAction:any = () => {};
+
+  @Input("rejectAction")
+  rejectAction:any = () => {};
+
+  @ViewChild("container")
+  container:MnPopupComponent;
+
   constructor() {
     super();
   }
 
-
-
   private reject() : any {
-    this.hide();
+    this.container.hide();
+    this.onReject.emit( {reject:true});
+    this.rejectAction();
   }
 
   private resolve() : any {
-    this.hide();
-    alert("calling operation");
+    this.container.hide();
+    this.onResolve.emit( {resolve:true});
+    this.resolveAction();
   }
 
   private showTitle() : boolean {
@@ -36,6 +53,8 @@ export class MnDialogComponent extends MnPopupComponent {
   public setUpCmpRef(cmpRef:ComponentRef<MnDialogComponent>) : void {
     cmpRef.instance.title = this.title;
     cmpRef.instance.message = this.message;
+    cmpRef.instance.resolveAction = this.resolveAction;
+    cmpRef.instance.rejectAction = this.rejectAction;
   }
 
 }

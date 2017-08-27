@@ -7,6 +7,7 @@ import { MnTextFieldModule } from '../mn-text-field/mn-text-field.module';
 import { MnComboModule } from '../mn-combo/mn-combo.module';
 import { MnDialogModule } from '../mn-dialog/mn-dialog.module';
 import { MnPopupModule } from '../mn-popup/mn-popup.module';
+import { MnPanelModule } from '../mn-panel/mn-panel.module';
 import { Mn } from './mn.service';
 
 import { MnDataSource } from './mn-ds.service';
@@ -24,10 +25,11 @@ import { MnDynamicContainerComponent } from './mn-dyn-container.component';
     MnComboModule,
     HttpModule,
     MnDialogModule,
-    MnPopupModule
+    MnPopupModule,
+    MnPanelModule
   ],
   providers: [Mn],
-  exports: [CommonModule,MnMasterPageModule,MnToastModule,MnButtonModule,
+  exports: [CommonModule,MnMasterPageModule,MnToastModule,MnButtonModule,MnPanelModule,
             MnTextFieldModule,MnComboModule,MnDialogModule,MnPopupModule,MnDynamicContainerComponent],
   declarations: [MnDynamicContainerComponent]
 })

@@ -1,4 +1,5 @@
-import { Component, OnInit,ViewContainerRef,ViewChild,Input,ComponentRef } from '@angular/core';
+import { Component, OnInit,ViewContainerRef,
+  ViewChild,Input,ComponentRef } from '@angular/core';
 
 @Component({
   selector: 'mn-popup',
