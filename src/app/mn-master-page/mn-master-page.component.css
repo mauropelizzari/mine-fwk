@@ -61,11 +61,11 @@
 .master-navigation .mdl-navigation__link .material-icons {
   font-size: 24px;
   color: rgba(255, 255, 255, 0.56);
-  margin-right: 32px;
+/*  margin-right: 32px; */
 }
 
 .master-content {
-  max-width: 1080px;
+  width: 100%;
 }
 
 .master-charts {

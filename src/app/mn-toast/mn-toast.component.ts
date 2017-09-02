@@ -78,13 +78,17 @@ export class MnToastComponent implements OnInit {
     let toast = Mn.createCmp({
       type: "div",
       attributes: {
-        'class':"alert alert-" + this.type + " fade show",
+    //    'class':"alert alert-" + this.type + " fade show",
+    'class':"mdl-snackbar",
       },
-      children : [span,toastmsg]
+    //  children : [span,toastmsg]
+      children : [toastmsg]
     });
 
-    let container = document.querySelector(".toast-container");
-    container.appendChild(toast);
+    //let container = document.querySelector(".toast-container");
+    //container.appendChild(toast);
+    document.body.appendChild(toast);
+
 
     closeAncor.addEventListener("click",() => {
       toast.classList.remove("show");
