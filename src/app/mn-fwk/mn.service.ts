@@ -32,13 +32,13 @@ export class Mn {
       });
     }
 
-/*
+    //add events
     if (cfg.events) {
       for (let event in cfg.events) {
-
+        obj.addEventListener(event["name"],event["function"]);
       }
     }
-*/
+
     return obj;
 
   }

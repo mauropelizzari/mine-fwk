@@ -7,7 +7,7 @@ import { FormsModule,
 import { MnTextFieldComponent } from '../mn-text-field/mn-text-field.component';
 import { MnDataSource } from '../mn-fwk/mn-ds.service';
 
-import { MnToastComponent,MESSAGE_TYPE } from '../mn-toast/mn-toast.component';
+import { MnToastComponent } from '../mn-toast/mn-toast.component';
 
 
 @Component({
@@ -47,7 +47,7 @@ export class MnComboComponent extends MnTextFieldComponent implements OnInit {
       this.datasource.getData().then(data => {
         this.items = data.results;
       }).catch(error => {
-        MnToastComponent.show(error,MESSAGE_TYPE.ERROR,true);
+        MnToastComponent.show(error);
       });
     }
     this.checkDirty();

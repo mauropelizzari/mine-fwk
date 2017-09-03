@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild,EventEmitter} from '@angular/core';
 import { MnMasterPageComponent} from '../mn-master-page/mn-master-page.component'
-import { MnToastComponent,MESSAGE_TYPE } from '../mn-toast/mn-toast.component';
+import { MnToastComponent } from '../mn-toast/mn-toast.component';
 import { MnTextFieldComponent} from '../mn-text-field/mn-text-field.component'
 import { MnComboComponent} from '../mn-combo/mn-combo.component'
 import { MnDataSource } from '../mn-fwk/mn-ds.service';
@@ -61,11 +61,9 @@ export class ShowcaseComponent implements OnInit {
     this.pp.show();
   }
 
-  showToast(message,type,autohide) {
-    MnToastComponent.show(message,type,autohide);
+  showToast(message) {
+    MnToastComponent.show(message);
   }
-
-  get MESSAGE_TYPE() { return MESSAGE_TYPE; }
 
   ngOnInit() {
       let cfg = {
