@@ -51,7 +51,7 @@ export class MnToastComponent implements OnInit {
         },
         children : [toastmsg],
         events: {
-          'name'      : 'mouseover', 
+          'name'      : 'mouseover',
           'function'  : function() {
               if (this.timeout)
                 clearTimeout(this.timeout);
@@ -65,7 +65,6 @@ export class MnToastComponent implements OnInit {
       toastObj.classList.remove("show");
       toastObj.classList.add("hide");
     },5000);
-
   }
 
 }

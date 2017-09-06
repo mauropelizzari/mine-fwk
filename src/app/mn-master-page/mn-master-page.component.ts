@@ -7,8 +7,8 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MnMasterPageComponent implements OnInit {
 
-  @Input("title")
-  title:string="master";
+  @Input("titleApp")
+  titleApp:string="master";
 
   @Input("username")
   username:string="jon";
@@ -17,7 +17,15 @@ export class MnMasterPageComponent implements OnInit {
   logo:string="";
 
   constructor() {
-    
+
+  }
+
+  showMenu() {
+    setTimeout(()=>{document.getElementById("mnBtn").style.left = "250px";},500);
+  }
+
+  hideMenu() {
+    setTimeout(()=>{document.getElementById("mnBtn").style.left = "0px";},500);
   }
 
   ngOnInit() {
