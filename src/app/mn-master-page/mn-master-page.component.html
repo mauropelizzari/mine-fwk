@@ -31,18 +31,19 @@
           <span>{{username}}</span>
         </div>
       </header>
+      <!--menu -->
       <nav class="master-navigation mdl-navigation mdl-color--blue-grey-800">
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i>Home</a>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i>Inbox</a>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i>Trash</a>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i>Spam</a>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">forum</i>Forums</a>
-        <a class="mdl-navigation__link" href=""><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">flag</i>Updates</a>
-          <div class="mdl-layout-spacer"></div>
+        <a class="mdl-navigation__link" (click)="hideMenu()" routerLink="/button-page"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">home</i> Buttons</a>
+        <a class="mdl-navigation__link" (click)="hideMenu()" routerLink="/field-page"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">inbox</i> Fields</a>
+        <a class="mdl-navigation__link" (click)="hideMenu()" routerLink="/toast-page"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">delete</i> Toast</a>
+        <a class="mdl-navigation__link" (click)="hideMenu()" routerLink="/dialog-page"><i class="mdl-color-text--blue-grey-400 material-icons" role="presentation">report</i> Dialogs</a>
+        <div class="mdl-layout-spacer"></div>
       </nav>
+      <!--end menu-->
     </div>
     <main (mouseover)="hideMenu()" (click)="hideMenu()" class="mdl-layout__content mdl-color--grey-100">
-        <ng-content></ng-content>
+      <ng-content></ng-content>
+      <router-outlet></router-outlet>
     </main>
 
   </div>

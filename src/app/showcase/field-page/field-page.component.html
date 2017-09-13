@@ -1,0 +1,11 @@
+<mn-panel id="pnlFields" title="Text Fields">
+  <mn-textfield maxlength="10"
+  required="true" id="text1" [(ngModel)]='valore' label="Campo from"></mn-textfield>
+
+  <mn-textfield id="text2" [(ngModel)]='valore2' label="Campo to" readonly="true"></mn-textfield>
+
+  <h4>Combos</h4>
+  <mn-combo required [datasource]="nmDs" id="c1" label="Numbers"></mn-combo>
+
+
+</mn-panel>
